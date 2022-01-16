@@ -21,7 +21,7 @@ public class MemberController {
 
 	@RequestMapping(value = "/member/register.do", method = RequestMethod.GET)
 	public ModelAndView memberRegister(HttpServletRequest request, HttpServletResponse response) {
-		return new ModelAndView("member/register");
+		return new ModelAndView("member/register.tiles");
 	}
 
 	@RequestMapping(value = "/member/registerOk.do", method = RequestMethod.POST)
@@ -47,7 +47,7 @@ public class MemberController {
 
 	@RequestMapping(value = "/member/login.do", method = RequestMethod.GET)
 	public ModelAndView memberLogin(HttpServletRequest request, HttpServletResponse response) {
-		return new ModelAndView("member/login");
+		return new ModelAndView("member/login.tiles");
 	}
 
 	@RequestMapping(value = "/member/loginOk.do", method = RequestMethod.POST)
@@ -62,17 +62,17 @@ public class MemberController {
 
 	@RequestMapping(value = "/member/main.do", method = RequestMethod.GET)
 	public ModelAndView memberMain(HttpServletRequest request, HttpServletResponse response) {
-		return new ModelAndView("member/main");
+		return new ModelAndView("member/main.tiles");
 	}
 
 	@RequestMapping(value = "/member/logout.do", method = RequestMethod.GET)
 	public ModelAndView memberLogOut(HttpServletRequest request, HttpServletResponse response) {
-		return new ModelAndView("member/logout");
+		return new ModelAndView("member/logout.tiles");
 	}
 
 	@RequestMapping(value = "/member/delete.do", method = RequestMethod.GET)
 	public ModelAndView memberDelete(HttpServletRequest request, HttpServletResponse response) {
-		return new ModelAndView("member/delete");
+		return new ModelAndView("member/delete.tiles");
 	}
 
 	@RequestMapping(value = "/member/deleteOk.do", method = RequestMethod.POST)

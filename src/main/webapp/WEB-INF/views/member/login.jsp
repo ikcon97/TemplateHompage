@@ -10,7 +10,7 @@
 <body>
 	<c:set var="root" value="${pageContext.request.contextPath }"/>
 	
-	<a href="${root}/index.jsp">시작 페이지</a>
+	<a href="${root}/index.tiles">시작 페이지</a>
 	<div align="center">
 		<form action="${root}/member/loginOk.do" method="post">
 			<table>

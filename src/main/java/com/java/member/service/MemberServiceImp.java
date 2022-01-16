@@ -31,7 +31,7 @@ public class MemberServiceImp implements MemberService {
 		LogAspect.logger.info(LogAspect.LogMsg + check);
 
 		mav.addObject("check", check);
-		mav.setViewName("member/registerOk");
+		mav.setViewName("member/registerOk.tiles");
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class MemberServiceImp implements MemberService {
 
 		mav.addObject("memberLevel", memberLevel);
 		mav.addObject("id", id);
-		mav.setViewName("member/loginOk");
+		mav.setViewName("member/loginOk.tiles");
 
 	}
 
@@ -65,7 +65,7 @@ public class MemberServiceImp implements MemberService {
 
 		mav.addObject("check", check);
 		mav.addObject("id", memberDto.getId());
-		mav.setViewName("member/idCheck");
+		mav.setViewName("member/idCheck.empty");
 
 	}
 
@@ -84,7 +84,7 @@ public class MemberServiceImp implements MemberService {
 		LogAspect.logger.info(LogAspect.LogMsg + check);
 
 		mav.addObject("check", check);
-		mav.setViewName("member/deleteOk");
+		mav.setViewName("member/deleteOk.tiles");
 	}
 
 	@Override
@@ -100,7 +100,7 @@ public class MemberServiceImp implements MemberService {
 		LogAspect.logger.info(LogAspect.LogMsg + memberDto.toString());
 
 		mav.addObject("memberDto", memberDto);
-		mav.setViewName("member/update");
+		mav.setViewName("member/update.tiles");
 
 	}
 
@@ -115,6 +115,6 @@ public class MemberServiceImp implements MemberService {
 		LogAspect.logger.info(LogAspect.LogMsg + check);
 
 		mav.addObject("check", check);
-		mav.setViewName("member/updateOk");
+		mav.setViewName("member/updateOk.tiles");
 	}
 }

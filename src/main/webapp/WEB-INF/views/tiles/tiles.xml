@@ -3,25 +3,45 @@
 "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-	<definition name="layout" template="/WEB-INF/views/template/layout.jsp">
-		<put-attribute name="header" value="/WEB-INF/views/template/header.jsp"/>
-		<put-attribute name="menu" value="/WEB-INF/views/template/menu.jsp"/>
-		<put-attribute name="content" value = ""/>
-		<put-attribute name="foot" value="/WEB-INF/views/template/foot.jsp"/>
+	<!-- 템플릿 적용 -->
+	<definition name="layout"
+		template="/WEB-INF/views/template/layout.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/views/template/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/template/menu.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="foot"
+			value="/WEB-INF/views/template/foot.jsp" />
 	</definition>
-	
+
 	<!-- /WEB-INF/views/write.jsp -->
 	<definition name="*.tiles" extends="layout">
-		<put-attribute name="content" value="/WEB-INF/views/{1}.jsp"/>
+		<put-attribute name="content"
+			value="/WEB-INF/views/{1}.jsp" />
 	</definition>
-	
+
 	<!-- /WEB-INF/views/board/write.jsp -->
 	<definition name="*/*.tiles" extends="layout">
-		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
+		<put-attribute name="content"
+			value="/WEB-INF/views/{1}/{2}.jsp" />
 	</definition>
-	
+
 	<!-- /WEB-INF/views/board/aaa/write.jsp -->
 	<definition name="*/*/*.tiles" extends="layout">
-		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}/{3}.jsp"/>
+		<put-attribute name="content"
+			value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
 	</definition>
+
+	<!-- 템플릿 적용 -->
+	<definition name="empty" template="/WEB-INF/views/template/empty.jsp">
+		<put-attribute name="content" value=""/>
+	</definition>
+	
+	<definition name="*/*.empty" extends="empty">
+		<put-attribute name="content"
+			value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+
+
 </tiles-definitions>

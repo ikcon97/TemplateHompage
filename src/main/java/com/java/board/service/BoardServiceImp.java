@@ -42,7 +42,7 @@ public class BoardServiceImp implements BoardService {
 		mav.addObject("sequenceNumber", sequenceNumber);
 		mav.addObject("sequenceLevel", sequenceLevel);
 
-		mav.setViewName("board/write");
+		mav.setViewName("board/write.tiles");
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class BoardServiceImp implements BoardService {
 
 		LogAspect.logger.info(LogAspect.LogMsg + boardDto.toString());
 		mav.addObject("check", check);
-		mav.setViewName("board/writeOk");
+		mav.setViewName("board/writeOk.tiles");
 	}
 
 	public void writeNumber(BoardDto boardDto) {
@@ -124,7 +124,7 @@ public class BoardServiceImp implements BoardService {
 		mav.addObject("boardList", boardList);// 게시물 리스트
 		mav.addObject("count", count);// 전체 게시물 수
 
-		mav.setViewName("board/list");
+		mav.setViewName("board/list.tiles");
 
 	}
 
@@ -143,7 +143,7 @@ public class BoardServiceImp implements BoardService {
 
 		mav.addObject("boardDto", boardDto);
 		mav.addObject("pageNumber", pageNumber);
-		mav.setViewName("board/read");
+		mav.setViewName("board/read.tiles");
 	}
 
 	@Override
@@ -162,7 +162,7 @@ public class BoardServiceImp implements BoardService {
 
 		mav.addObject("check", check);
 		mav.addObject("pageNumber", pageNumber);
-		mav.setViewName("board/deleteOk");
+		mav.setViewName("board/deleteOk.tiles");
 
 	}
 	@Override
@@ -180,7 +180,7 @@ public class BoardServiceImp implements BoardService {
 		
 		mav.addObject("boardDto", boardDto);
 		mav.addObject("pageNumber", pageNumber);
-		mav.setViewName("board/update");
+		mav.setViewName("board/update.tiles");
 	}
 	@Override
 	public void boardUpdateOk(ModelAndView mav) {
@@ -197,6 +197,6 @@ public class BoardServiceImp implements BoardService {
 		
 		mav.addObject("pageNumber", pageNumber);
 		mav.addObject("check", check);
-		mav.setViewName("board/updateOk");
+		mav.setViewName("board/updateOk.tiles");
 	}
 }

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="${root}/css/member/registerStyle.css">
 </head>
 <body>
-	<a href="${root}/index.jsp">시작 페이지</a>
+	<a href="${root}">시작 페이지</a>
 
 	<div id="title">
 		<h4>회원가입(*필수입력사항입니다.)</h4>

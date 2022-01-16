@@ -53,7 +53,7 @@ public class FileBoardServiceImp implements FileBoardService {
 		mav.addObject("sequenceNumber", sequenceNumber);
 		mav.addObject("sequenceLevel", sequenceLevel);
 
-		mav.setViewName("fileboard/write");
+		mav.setViewName("fileboard/write.tiles");
 	}
 
 	@Override
@@ -95,7 +95,7 @@ public class FileBoardServiceImp implements FileBoardService {
 		LogAspect.logger.info(LogAspect.LogMsg + check);
 
 		mav.addObject("check", check);
-		mav.setViewName("fileboard/writeOk");
+		mav.setViewName("fileboard/writeOk.tiles");
 	}
 
 	public void fileBoardWriterNumber(FileBoardDto fileBoardDto) {
@@ -158,7 +158,7 @@ public class FileBoardServiceImp implements FileBoardService {
 		mav.addObject("boardList", boardList);// 게시물 리스트
 		mav.addObject("count", count);// 전체 게시물 수
 
-		mav.setViewName("fileboard/list");
+		mav.setViewName("fileboard/list.tiles");
 
 	}
 
@@ -183,7 +183,7 @@ public class FileBoardServiceImp implements FileBoardService {
 
 		mav.addObject("boardDto", fileBoardDto);
 		mav.addObject("pageNumber", pageNumber);
-		mav.setViewName("fileboard/read");
+		mav.setViewName("fileboard/read.tiles");
 	}
 
 	@Override
@@ -245,7 +245,7 @@ public class FileBoardServiceImp implements FileBoardService {
 
 		mav.addObject("boardNumber", boardNumber);
 		mav.addObject("pageNumber", pageNumber);
-		mav.setViewName("fileboard/delete");
+		mav.setViewName("fileboard/delete.tiles");
 	}
 
 	@Override
@@ -272,7 +272,7 @@ public class FileBoardServiceImp implements FileBoardService {
 
 		mav.addObject("check", check);
 		mav.addObject("pageNumber", pageNumber);
-		mav.setViewName("fileboard/deleteOk");
+		mav.setViewName("fileboard/deleteOk.tiles");
 	}
 
 	@Override
@@ -295,7 +295,7 @@ public class FileBoardServiceImp implements FileBoardService {
 
 		mav.addObject("boardDto", boardDto);
 		mav.addObject("pageNumber", pageNumber);
-		mav.setViewName("fileboard/update");
+		mav.setViewName("fileboard/update.tiles");
 	}
 
 	@Override
@@ -341,6 +341,6 @@ public class FileBoardServiceImp implements FileBoardService {
 
 		mav.addObject("check", check);
 		mav.addObject("pageNumber", pageNumber);
-		mav.setViewName("fileboard/updateOk");
+		mav.setViewName("fileboard/updateOk.tiles");
 	}
 }

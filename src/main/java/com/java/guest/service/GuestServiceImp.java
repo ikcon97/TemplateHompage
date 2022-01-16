@@ -29,7 +29,7 @@ public class GuestServiceImp implements GuestService {
 		LogAspect.logger.info(LogAspect.LogMsg + check);
 
 		mav.addObject("check", check);
-		mav.setViewName("guest/writeOk");
+		mav.setViewName("guest/writeOk.tiles");
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class GuestServiceImp implements GuestService {
 		mav.addObject("count", count);
 		mav.addObject("boardSize", boardSize);
 		mav.addObject("currentPage", currentPage);
-		mav.setViewName("guest/write");
+		mav.setViewName("guest/write.tiles");
 	}
 
 	@Override
@@ -74,7 +74,7 @@ public class GuestServiceImp implements GuestService {
 		LogAspect.logger.info(LogAspect.LogMsg + check);
 
 		mav.addObject("check", check);
-		mav.setViewName("guest/delete");
+		mav.setViewName("guest/delete.tiles");
 	}
 
 	@Override
@@ -87,7 +87,7 @@ public class GuestServiceImp implements GuestService {
 		LogAspect.logger.info(LogAspect.LogMsg + guestDto.toString());
 
 		mav.addObject("guestDto", guestDto);
-		mav.setViewName("guest/update");
+		mav.setViewName("guest/update.tiles");
 	}
 
 	@Override
@@ -103,7 +103,7 @@ public class GuestServiceImp implements GuestService {
 		LogAspect.logger.info(LogAspect.LogMsg + check);
 
 		mav.addObject("check", check);
-		mav.setViewName("guest/updateOk");
+		mav.setViewName("guest/updateOk.tiles");
 
 	}
 }
